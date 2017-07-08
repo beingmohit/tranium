@@ -3,3 +3,7 @@ node_js:
   - "6"
 before_install:
   - echo $'APP_NAME=test\nURL=/graphql\nPORT=3000\nSTAGE=testing' > .env.local
+after_script:
+  - npm run test:coverage
+  - npm i coveralls
+  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js

@@ -24,7 +24,7 @@
     "lint:staged": "lint-staged",
     "test": "NODE_ENV=test jest",
     "test:watch": "NODE_ENV=test jest --watch",
-    "test:coverage": "npm test -- --coverage --collectCoverageFrom 'app/**/*.js'",
+    "test:coverage": "npm test -- --coverage --collectCoverageFrom 'app/**/*.js' --collectCoverageFrom 'api/**/*.js'",
     "start:remote": "npm run generate:config:local && MOCKED_DATABASE=false env-cmd .env.local nodemon ./scripts/devServer.js --ignore app --exec babel-node",
     "remove": "env-cmd .env.prod serverless remove",
     "describe": "env-cmd .env.prod node scripts/getStackDescription.js"
