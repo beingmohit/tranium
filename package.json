@@ -1,10 +1,10 @@
 {
-  "name": "serverless-boilerplate",
+  "name": "tranium",
   "version": "0.0.0",
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git@github.com:beingmohit/serverless-boilerplate.git"
+    "url": "git@github.com:beingmohit/tranium.git"
   },
   "scripts": {
     "start": "npm run generate:config:local && MOCKED_DATABASE=true env-cmd .env.local nodemon ./scripts/devServer.js --ignore app --exec babel-node",
