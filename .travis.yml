@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "6"
 before_install:
-  - echo $'APP_NAME=tranium-travis-ci\nSTAGE=testing\nPORT=3000\nS3_BUCKET=tranium-travis-ci\n' > .env.local
+  - echo $'APP_NAME=tranium-travis-ci\nSTAGE=testing\nPORT=3000\nS3_BUCKET=tranium-travis-ci\n' > .env
 after_script:
   - npm run test:coverage
   - npm i coveralls
