@@ -7,5 +7,5 @@ after_script:
   - npm run test:coverage
   - npm i coveralls
   - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
-  - npm run deploy
-  - npm run remove
+  - npm run deploy || exit 1
+  - npm run remove || exit 1
