@@ -1,10 +1,10 @@
-import 'babel-polyfill'; // needed to for async/await
+import 'babel-polyfill'; 
 
 import { GraphQLSchema } from 'graphql';
 import QueryType from './types/query';
-// import MutationType from './types/mutation';
+import MutationType from './types/mutation';
 
 export default new GraphQLSchema({
   query: QueryType,
-  // mutation: MutationType,
+  //mutation: MutationType
 });

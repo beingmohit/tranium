@@ -3,28 +3,6 @@ const webpack = require('webpack');
 
 const fs = require('fs');
 
-if (process.env.URL) {
-  var url = process.env.URL
-}
-else {
-
-  var file = path.join(__dirname, '../../build/output.json');
-
-  if (fs.existsSync(file)) {
-
-    var obj = JSON.parse(fs.readFileSync(file, 'utf8'));
-
-    if (obj && obj.Outputs) {
-      for (let item of obj.Outputs) {
-        if (item.OutputKey == 'ServiceEndpoint')
-          url = item.OutputValue + '/graphql';
-      }
-    }
-  }
-}
-
-console.log('URL:', url);
-
 module.exports = (options) => ({
   entry: options.entry,
 
@@ -75,12 +53,9 @@ module.exports = (options) => ({
       fetch: 'exports-loader?self.fetch!whatwg-fetch',
     }),
 
-    // Always expose NODE_ENV to webpack, in order to use `process.env.NODE_ENV`
-    // inside your code for any environment checks; UglifyJS will automatically
-    // drop any unreachable code.
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV) || JSON.stringify('DEVELOPMENT'),
-      'process.env.GRAPHQL_ENDPOINT': JSON.stringify(url)
+      'process.env.STAGE': JSON.stringify(process.env.STAGE) || JSON.stringify('local'),
+      'process.env.API_URL': JSON.stringify(options.url)
     }),
   ]),
 

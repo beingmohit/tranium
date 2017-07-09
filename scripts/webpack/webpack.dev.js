@@ -9,6 +9,7 @@ function templateContent() {
 }
 
 module.exports = require('./webpack.base')({
+  url: '/graphql',
   // Add hot reloading in development
   entry: [
     'webpack-hot-middleware/client',

@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
+    "dynogels": "^8.0.1",
     "graphql": "0.9.1",
     "graphql-relay": "0.5.1",
     "jsonwebtoken": "^7.1.9",

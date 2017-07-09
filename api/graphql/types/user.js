@@ -1,21 +1,15 @@
 /* @flow */
 
-import {
-  GraphQLObjectType,
-  GraphQLString,
-} from 'graphql';
+import { GraphQLObjectType, GraphQLString } from 'graphql';
 
 const UserType = new GraphQLObjectType({
   name: 'User',
-  description: 'A person who uses our app',
   fields: () => ({
     id: {
-      type: GraphQLString,
-      description: 'The unique Identifier of the user',
+      type: GraphQLString
     },
     name: {
-      type: GraphQLString,
-      description: 'The name of the user',
+      type: GraphQLString
     },
   }),
 });

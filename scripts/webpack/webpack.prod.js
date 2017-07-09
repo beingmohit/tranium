@@ -11,7 +11,24 @@ function templateContent() {
   return fs.readFileSync(path.resolve(process.cwd(), 'app/index.html')).toString();
 }
 
+var url = '/graphql';
+
+var file = path.join(__dirname, '../../build/output.json');
+
+if (fs.existsSync(file)) {
+
+  var obj = JSON.parse(fs.readFileSync(file, 'utf8'));
+
+  if (obj && obj.Outputs) {
+    for (let item of obj.Outputs) {
+      if (item.OutputKey == 'ServiceEndpoint')
+        url = item.OutputValue + url;
+    }
+  }
+}
+
 module.exports = require('./webpack.base')({
+  url: url,
   // In production, we skip all hot-reloading stuff.
   entry: [
     'whatwg-fetch',

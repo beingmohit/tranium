@@ -13,12 +13,12 @@ import {
 import App from './containers/App';
 import Dashboard from './containers/Dashboard';
 
-if (!process.env.GRAPHQL_ENDPOINT) {
-  throw new Error('GRAPHQL_ENDPOINT is not defined');
+if (!process.env.API_URL) {
+  throw new Error('API_URL is not defined');
 }
 const client = new ApolloClient({
   networkInterface: createNetworkInterface({
-    uri: process.env.GRAPHQL_ENDPOINT,
+    uri: process.env.API_URL,
   }),
 });
 

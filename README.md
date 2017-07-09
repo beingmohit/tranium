@@ -33,7 +33,7 @@ npm install -g yarn
 yarn
 ```
 
-Make file `.env.local` & `.env.prod` using `.sample` files provided.
+Add configuration to file `.env` (See `.env.sample`)
 
 #### Developing
 ```
