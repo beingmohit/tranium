@@ -34,6 +34,7 @@ yarn
 ```
 
 [Follow these instructions on setting up AWS credentials](https://serverless.com/framework/docs/providers/aws/guide/credentials/)
+
 Add configuration to file `.env` (See `.env.sample`)
 
 #### Developing
