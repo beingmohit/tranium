@@ -10,3 +10,7 @@ after_script:
   - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
   - npm run deploy || exit 1
   - npm run remove || exit 1
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/4af54608b616b3f199f5
