@@ -11,10 +11,6 @@ Goal of Tranium is to provide the perfect starting point for a serverless data d
 - [x] Webpack
 - [x] Jest
 - [ ] DynamoDB
-- [ ] AWS Cognito 
-- [ ] AWS SQS
-- [ ] AWS SNS
-- [ ] WebSockets
 
 
 ##### Features
