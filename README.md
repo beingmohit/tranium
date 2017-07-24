@@ -11,7 +11,7 @@ Goal of Tranium is to provide the perfect starting point for a serverless data d
 - [x] Webpack
 - [x] Jest
 - [ ] DynamoDB
-- [ ] Redux
+
 
 
 ##### Features
