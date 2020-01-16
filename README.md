@@ -58,7 +58,3 @@ npm run test
 ```
 
 ---
-
-### Contributions
-
-All contributions are welcome. [Discuss](https://gitter.im/teamtranium), Create a fork & Submit PR along with tests.
